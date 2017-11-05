@@ -85,8 +85,6 @@ JHtml::_('script', 'templates/' . $this->template . '/javascript/template.js', a
 // Check for a custom js file
 JHtml::_('script', 'templates/' . $this->template . '/javascript/user.js', array('version' => 'auto'));
 
-require __DIR__ . '/jsstrings.php';
-
 // Add html5 shiv
 JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true, 'conditional' => 'lt IE 9'));
 ?>
