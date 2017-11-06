@@ -32,8 +32,7 @@ JHtml::_('script', 'templates/' . $this->template . '/javascript/jquery-3.2.1.js
 JHtml::_('script', 'templates/' . $this->template . '/javascript/bootstrap.js', array('version' => 'auto'));
 JHtml::_('script', 'templates/' . $this->template . '/javascript/scrollspy.js', array('version' => 'auto'));
 JHtml::_('script', 'templates/' . $this->template . '/javascript/affix.js', array('version' => 'auto'));
-
-
+JHtml::_('script', 'templates/' . $this->template . '/javascript/carousel.js', array('version' => 'auto'));
 
 ?>
 
@@ -61,8 +60,14 @@ JHtml::_('script', 'templates/' . $this->template . '/javascript/affix.js', arra
 				background-color: #f2f2f2;
 				padding: 25px;
 			}
+
+			.logo {
+			    font-size: 200px;
+        		margin: 25px 0;
+			}
 		</style>
 		  <style>
+
   /* Note: Try to remove the following lines to see the effect of CSS positioning */
   .affix {
       top: 0;
@@ -85,7 +90,7 @@ JHtml::_('script', 'templates/' . $this->template . '/javascript/affix.js', arra
   </div>
 </div>
 
-<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="241">
+<nav class="navbar navbar-default" data-spy="affix" data-offset-top="241">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -188,16 +193,16 @@ JHtml::_('script', 'templates/' . $this->template . '/javascript/affix.js', arra
           <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjMxcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NTAweDUwMDwvdGV4dD48L3N2Zz4=">
+        <div class="col-md-5 text-center">
+      		<span class="glyphicon glyphicon-signal logo"></span>
         </div>
       </div>
 
       <hr class="featurette-divider">
 
       <div class="row featurette">
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjMxcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NTAweDUwMDwvdGV4dD48L3N2Zz4=">
+        <div class="col-md-5 text-center">
+      		<span class="glyphicon glyphicon-signal logo"></span>
         </div>
         <div class="col-md-7">
           <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
@@ -212,8 +217,8 @@ JHtml::_('script', 'templates/' . $this->template . '/javascript/affix.js', arra
           <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjMxcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NTAweDUwMDwvdGV4dD48L3N2Zz4=">
+        <div class="col-md-5 text-center">
+      		<span class="glyphicon glyphicon-signal logo"></span>
         </div>
       </div>
 
